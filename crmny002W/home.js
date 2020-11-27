@@ -19,7 +19,8 @@ function setup() {
 
 function draw() {
     for (var i = 0; i < 200; i++) {
-        for (var im of images) {
+        for (var j = 0; j < images.length; j++) {
+            var im = images[j];
             im.update();
             im.draw();
         }
