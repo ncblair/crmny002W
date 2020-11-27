@@ -1,0 +1,684 @@
+@font-face {
+  font-family: 'ceremony';
+  src: url('DIN Medium Regular.ttf');
+}
+html {
+	margin:0;
+}
+
+body {
+	margin:0;
+	background-color:black;
+	font-family:"ceremony";
+	color:black;
+	min-width:1000;        /* Suppose you want minimum width of 1000px */
+	width: auto !important;  /* Firefox will set width as auto */
+	width:1000;            /* As IE6 ignores !important it will set width as 1000px; */
+}
+
+#landing-img {
+	width:100%;
+	height:auto;
+}
+
+#mobile-landing-img {
+	display:none;
+}
+
+#vol-2-announcement {
+	font-size:52px;
+	font-family:"ceremony";
+	position:absolute;
+	bottom:30%;
+	left:5%;
+	text-align:left;
+	padding:15px;
+}
+
+#landing {
+	width:100%;
+	height:auto;
+	background-color:black;
+	text-align:center;
+	position:relative;
+}
+
+
+/*animated arrow bouncing
+**********************************************/
+/*adapted from https://codepen.io/dodozhang21/pen/siKtp*/
+
+
+#arrow {
+	position:absolute;
+  	left: calc(5% + 303px);
+  	bottom:30%;
+  	transform:translateY(-20px);
+  	height:100px;
+}
+
+.bounce {
+	-webkit-animation-name: bounce;
+	-moz-animation-name: bounce;
+	-o-animation-name: bounce;
+	animation-name: bounce;
+}
+.animated {
+    -webkit-animation-fill-mode:both;
+	-moz-animation-fill-mode:both;
+	-ms-animation-fill-mode:both;
+	-o-animation-fill-mode:both;
+
+    animation-iteration-count: infinite;
+    -moz-animation-iteration-count: infinite;
+    -webkit-animation-iteration-count: infinite;
+
+	animation-fill-mode:both;
+	-webkit-animation-duration:2s;
+	-moz-animation-duration:2s;
+	-ms-animation-duration:2s;
+	-o-animation-duration:2s;
+	animation-duration:2s;
+}
+
+
+@-webkit-keyframes bounce {
+	0%, 20%, 50%, 80%, 100% {-webkit-transform: translateY(0);}	40% {-webkit-transform: translateY(-30px);}
+	60% {-webkit-transform: translateY(-15px);}
+}
+
+@-moz-keyframes bounce {
+	0%, 20%, 50%, 80%, 100% {-moz-transform: translateY(0);}
+	40% {-moz-transform: translateY(-30px);}
+	60% {-moz-transform: translateY(-15px);}
+}
+
+@-o-keyframes bounce {
+	0%, 20%, 50%, 80%, 100% {-o-transform: translateY(0);}
+	40% {-o-transform: translateY(-30px);}
+	60% {-o-transform: translateY(-15px);}
+}
+@keyframes bounce {
+	0%, 20%, 50%, 80%, 100% {transform: translateY(0);}
+	40% {transform: translateY(-30px);}
+	60% {transform: translateY(-15px);}
+}
+
+.page {
+	width:84%;
+	height:500px;
+	padding:8%;
+	overflow:hidden;
+
+}
+
+button {
+  	margin: 10px;
+  	padding: 15px;
+  	border: 2px solid #FFFFFF;
+  	border-radius: 6px;
+  	text-align: center;
+  	display: inline-block;
+  	text-transform: uppercase;
+  	position: relative;
+  	color:white;
+  	font-family:"ceremony";
+  	font-size: 20px;
+  	background-color: transparent;
+  	filter: drop-shadow(0px 0px 20px rgba(0, 0, 0, 0.10));
+}
+
+button:hover {
+    cursor: pointer;
+    background: #FFFFFF;
+    color: black;
+}
+
+#vol2{
+	background: url('img/board.png');
+	background-size: cover;
+}
+
+#vol2event{
+	padding: 5% 0%;
+}
+
+#add{
+	font-size: .7em;
+}
+
+#schedule{
+	color: white;
+	font-size: 2em;
+}
+
+#names{
+	width: 40%;
+	text-align: right;
+	float: left;
+	display: inline;
+	list-style: none;
+	line-height: 1.7em;
+	padding-left: 2%;
+	margin-left: 3%;
+}
+
+#times{
+	float: right;
+	text-align: left;
+	list-style: none;
+	line-height: 1.7em;
+	display: inline;
+	width: 30%;
+	padding-left: 2%;
+	margin-right: 20%;
+	color: white;
+}
+
+#add{
+	color: white;
+	text-align: center;
+	font-size: 1.5em;
+}
+
+#event2watch{
+	margin-left: 38%;
+	margin-top: 2%;
+	text-align: center;
+}
+
+
+#vol2zine{
+	height: auto;
+}
+
+#zine2cover{
+	float:left;
+	opacity: .9;
+	position: relative;
+	padding-left: 5%;
+	height:auto;
+	width: 30%;
+	min-height:450px;
+}
+
+#zine2info{
+	float: right;
+	color: #FFFFFF;
+	width: 45%;
+	padding-top: 7%;
+	padding-right: 10%;
+}
+
+#zine2-list{
+	list-style: none;
+	line-height: 1.7em;
+	font-size: 22px;
+	display: block;
+  	-webkit-column-count: 3;
+    -moz-column-count: 3;
+    column-count: 3;
+    column-gap: 6%;
+    min-width:470px;
+}
+
+li{
+	display: block;
+	white-space: nowrap;
+}
+
+#zine2download{
+	text-align: left;
+	position: relative;
+	border: 2px solid #FFFFFF;
+	margin-left:20%;
+}
+
+#zine2purchase{
+	text-align: left;
+	position: relative;
+	border: 2px solid #FFFFFF;
+	margin-left:20%;
+	}
+
+#vol1{
+	background-image:url('img/gltch2.gif');
+	background-size:cover;
+    background-repeat: repeat-y;
+    background-attachment: fixed;
+    height: auto;
+    background-blend-mode: normal;
+    background-position: left top;
+}
+
+#vol1-title{
+	font-family: Helvetica Neue, sans-serif;
+	font-size: 50px;
+	color: #FFFFFF;
+}
+
+#vol1-info{
+	padding-top:13%;
+	padding-left: 10%;
+	float:left;
+	display:inline;
+	text-align:left;
+	width: 50%;
+}
+
+#vol1-zine{
+	float: right;
+	width: 40%;
+	opacity: 1;
+}
+
+.clearfix:after{
+	visibility: hidden;
+    display: block;
+    font-size: 0;
+    content: " ";
+    clear: both;
+    height: 0;
+}
+
+footer {
+	width:100%;
+	height:100px;
+	background-color: #272727;
+	color:white;
+	display: flex;
+  	justify-content: center;
+  	align-items: center;
+  	padding: 3% 0%;
+}
+
+#footer-logo-link {
+	height:100px;
+	width:18%;
+	margin-right:5%;
+	display: flex;
+  	justify-content: center;
+  	align-items: center;
+}
+
+#footer-logo {
+	width:100%;
+}
+
+#footer-info {
+	width:20%;
+	margin-right:15%;
+}
+
+#footer-contact {
+	width:30%;
+	margin-right:5%;
+	text-align: right;
+}
+
+#footer-contact > a {
+	text-decoration:none;
+	color:white;
+	padding-right:10px;
+	font-size:24px;
+}
+
+@media screen and (max-width: 600px){
+
+body {
+		min-width:0;
+		width: auto !important;
+		width:0;
+	}
+
+	#landing-img {
+		display:none;
+	}
+
+	#mobile-landing-img {
+		width:100%;
+		height:auto;
+		display:initial;
+	}
+
+	#arrow {
+		display:none;
+	}
+
+	#vol-2-announcement {
+		font-size:24px;
+		font-family:"ceremony";
+		width:70%;
+		position:absolute;
+		top:60%;
+		text-align:center;
+		padding:0px;
+		padding-top:15px;
+		padding-bottom:15px;
+		left:15%;
+	}
+
+	#vol2{
+		background: url('img/dust.png');
+		background-size: cover;
+	}
+
+	#vol2event{
+		display:block;
+		padding-top: 10%;
+	}
+
+	#schedule{
+		font-size: 100%;
+		margin-left: 5%;
+		margin-right: 7%;
+	}
+
+	#names{
+		float:left;
+		width: 50%;
+		display: inline;
+	}
+
+	#times{
+		float: right;
+		display: inline;
+		width: 20%;
+	}
+
+	#add{
+		font-size: 110%;
+	}
+
+	#event2watch{
+		font-size: 90%;
+		margin-left: 26%;
+		margin-top: 10%;
+	}
+
+	#zine2cover {
+	    width: 50%;
+	    display:block;
+	    text-align:center;
+	    vertical-align: middle;
+	    margin-top:20px;
+	    float:none;
+		opacity: .9;		
+		margin-left: 15%;
+		padding-right:15%;
+		padding-top:10%;
+		min-height:0;
+	}
+
+	#zine2-list{
+		font-size: 12px;
+		display: block;
+	  	-webkit-column-count: 3;
+	    -moz-column-count: 3;
+	    column-count: 3;
+	    column-gap: 0%;
+	    min-width:0;
+	}
+
+	#zine2info{
+		float: none;
+		display:block;
+		color: #FFFFFF;
+		width: 90%;
+		padding-top: 2%;
+		padding-right: 5%;
+		padding-left:5%;
+	}
+
+	#zine2-list{
+		font-size: 12px;
+		display: block;
+	  	-webkit-column-count: 3;
+	    -moz-column-count: 3;
+	    column-count: 3;
+	    column-gap: 0%;
+	    min-width:0;
+	}
+
+	#zine2download{
+		margin-bottom:15%;
+		font-size: 90%;
+	}
+
+	#zine2purchase{
+		margin-bottom:15%;
+		font-size: 90%;
+	}
+
+	#vol1-zine{
+		display:none;
+	}
+
+	#vol1-title {
+		margin-bottom:250px;
+		padding-top:0;
+		margin-top:0;
+	}
+
+	#vol1-info{
+		padding-top:5%;
+		padding-bottom:5%;
+		float:none;
+		display:inline;
+		text-align:left;
+		width: 90%;
+	}
+
+
+	footer {
+		font-size:12px;
+		height:100px;
+	}
+
+	#footer-logo-link {
+		margin-left:3.5%;
+		margin-right:3.5%;
+	}
+
+
+
+	#footer-info {
+		width:37%;
+		margin-right:3%;
+	}
+
+	#footer-contact {
+		width:33%;
+		margin-right:2%;
+	}
+
+	#footer-contact > a {
+		text-decoration:none;
+		color:white;
+		padding-right:10px;
+	}
+
+
+}
+
+
+@media screen and (max-width: 481px){
+
+
+
+	body {
+		min-width:0;         /*Suppose you want minimum width of 1000px */
+		width: auto !important;  /* Firefox will set width as auto */
+		width:0;
+	}
+
+	#landing-img {
+		display:none;
+	}
+
+	#mobile-landing-img {
+		width:100%;
+		height:auto;
+		display:initial;
+	}
+
+	#arrow {
+		display:none;
+	}
+
+	#vol-2-announcement {
+		font-size:24px;
+		font-family:"ceremony";
+		width:70%;
+		position:absolute;
+		top:60%;
+		text-align:center;
+		padding:0px;
+		padding-top:15px;
+		padding-bottom:15px;
+		left:15%;
+	}
+
+	#vol2{
+		background: url('img/dust.png');
+		background-size: cover;
+	}
+
+	#vol2event{
+		display:block;
+		padding-top: 10%;
+	}
+
+	#schedule{
+		font-size: 80%;
+		margin-left: 5%;
+		margin-right: 7%;
+	}
+
+	#names{
+		float:left;
+		width: 50%;
+	}
+
+	#times{
+		float: right;
+		display: inline;
+		width: 20%;
+	}
+
+	#add{
+		font-size: 50%;
+	}
+
+	#zine2cover {
+	    width: 50%;
+	    display:block;
+	    text-align:center;
+	    vertical-align: middle;
+	    margin-top:20px;
+	    float:none;
+		opacity: .9;		
+		padding-left: 11%;
+		padding-right:15%;
+		padding-top:10%;
+		min-height:0;
+	}
+
+
+	#event2watch{
+		font-size: 80%;
+		margin-left: 17%;
+		margin-top: 10%;
+	}
+	
+	#zine2info{
+		float: none;
+		display:block;
+		color: #FFFFFF;
+		width: 90%;
+		padding-top: 2%;
+		padding-right: 5%;
+		padding-left:5%;
+	}
+
+	#zine2-list{
+		font-size: 12px;
+		display: block;
+	  	-webkit-column-count: 3;
+	    -moz-column-count: 3;
+	    column-count: 3;
+	    column-gap: 0%;
+	    min-width:0;
+	}
+
+	#zine2download{
+		margin-bottom:15%;
+		font-size: 80%;
+		margin-left: 17%;
+	}
+
+	#zine2purchase{
+		margin-bottom:15%;
+		font-size: 80%;
+		margin-left: 17%;
+	}
+
+	#vol1-zine{
+		display:none;
+	}
+
+	#vol1-title {
+		margin-bottom:250px;
+		padding-top:0;
+		margin-top:0;
+		padding-left:2.5%;
+	}
+
+	#vol1-info{
+		padding-top:0%;
+		padding-bottom:5%;
+		padding-left: 5%;
+		float:left;
+		display:inline;
+		text-align:left;
+		width: 90%;
+	}
+
+	#zine1download{
+		font-size: 80%;
+	}
+
+	#event1watch{
+		font-size: 80%;
+	}
+
+
+	footer {
+		font-size:12px;
+		height:100px;
+	}
+
+	#footer-logo-link {
+		margin-left:3.5%;
+		margin-right:3.5%;
+	}
+
+
+	#footer-info {
+		width:37%;
+		margin-right:3%;
+	}
+
+	#footer-contact {
+		width:33%;
+		margin-right:2%;
+	}
+
+	#footer-contact > a {
+		text-decoration:none;
+		color:white;
+		padding-right:10px;
+	}
+
+
+}

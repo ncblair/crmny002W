@@ -1,0 +1,130 @@
+<html>
+  <head>
+    <title>ceremony</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css">
+    <link rel="icon" type="image/png" href="img/zine1logo.png"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  </head>
+  <body>
+    <header id="landing">
+      <img src="img/sketchlanding.jpg" id="landing-img" alt="a sketch over the ceremony logo" title="ceremony, VOL. 2">
+      <img src="img/mobilelanding3.jpg" id="mobile-landing-img" alt="a painted recreation of a crowd of people walking over the ceremony logo" title="ceremony, VOL. 2">
+      <div id="vol-2-announcement">
+        VOL. 2 <br> OUT NOW!
+      </div>
+      <a href="#vol2event" onclick="test('vol2event'); return false;"><img src="img/arrow3.png" id="arrow" class="animated bounce" alt="a sketched arrow pointing downwards bounces up and down" title="arrow"></a>
+    </header>
+
+ <main id="vol2">
+
+    <section id="vol2event">
+    <section id="schedule" class="clearfix">
+      <ul id="names">s
+        <li>SYCK</li>
+        <li>KRG</li>
+        <li>V Chip Superstar</li>
+        <li>Raaghav Minocha</li>
+        <li>Daviana Angelo</li>
+        <li>Jazlyn Martin & Kole Asher</li>
+        <li>Shalfi</li>
+        <li>Glass Beach</li>
+      </ul>
+      <ul id="times">
+        <li>7:00 - 7:20 PM</li>
+        <li>7:25 - 7:55 PM</li>
+        <li>8:00 - 8:30 PM</li>
+        <li>8:35 - 8:45 PM</li>
+        <li>8:45 - 8:55 PM</li>
+        <li>9:00 - 9:20 PM</li>
+        <li>9:25 - 9:45 PM</li>
+        <li>9:50 - 10:05 PM</li>
+      </ul>
+    </section>
+            <p id="add">THANK YOU / we raised $1170 for Black & Pink!</p>
+       <div id="button">
+          <a href="https://www.twitch.tv/ceremonyonline"><button id="event2watch">WATCH VOL. 2 EVENT HIGHLIGHTS ></button></a><br>
+      </div>
+    </section>
+
+
+    <section id="vol2zine" class="clearfix">
+      <aside id="zine2">
+        <a href="https://www.dropbox.com/sh/qgi4bo7hju7pq64/AADOorTAQ2VtXUM8dhZMkiaBa?dl=0"><img src="img/zine2-cover.png" id="zine2cover"></a>
+      </aside>
+      <article id="zine2info">
+         <ul id="zine2-list">
+          <li> Ashley Kim</li>
+          <li>Christian Kim</li>
+          <li>Jessica Tin</li>
+          <li>Jon Rafael</li>
+          <li>Joy Watanabe</li>
+          <li>Layla Dargahi</li>
+          <li>Nicole Kim</li>
+          <li>Michael Lin</li>
+          <li>Mihai Cipleu</li>
+          <li>Sophia Meng</li>
+          <li>Sophia Quach</li>
+          <li>Sunny Young</li>
+        </ul>
+        <div class="button">
+          <a href="https://www.dropbox.com/sh/qgi4bo7hju7pq64/AADOorTAQ2VtXUM8dhZMkiaBa?dl=0"><button id="zine2download">DOWNLOAD VOL. 2 DIGITAL ZINE ></button></a><br>
+          <a href="https://ceremonyonline.selz.com"><button id="zine2purchase">PURCHASE VOL. 2 PRINT ZINE ></button></a>
+        </div>
+      </article>
+    </section>
+
+  </main>
+ 
+    <section id="vol1" class="clearfix">
+      <article id="vol1-info">
+        <h3 id="vol1-title">
+        ceremony, VOL. 1
+        </h3>
+        <div class="button">
+          <a href="https://www.dropbox.com/s/j345tnwtqeroa69/ceremony%2C%20VOL.1.pdf?dl=0"><button id="zine1download">DOWNLOAD VOL. 1 DIGITAL ZINE ></button></a><br>
+          <a href="https://www.twitch.tv/ceremonyonline/videos?filter=highlights&sort=time"><button id="event1watch">WATCH VOL. 1 EVENT HIGHLIGHTS ></button></a>
+        </div>
+      </article>
+      <aside id="zine1cover">
+        <img id="vol1-zine" src="img/sale.JPG" alt="two copies of the print version of the ceremony, VOL. 1 zine" title="ceremony, VOL. 1 zine">
+      </aside>
+    </section>
+
+    <footer>
+      <a href="#landing" onclick="test('landing'); return false;" id="footer-logo-link"><img src="img/logo-white.png" alt="ceremony logo, the word ceremony is in a serif font" title="ceremony logo" id="footer-logo"></a>
+      <div id="footer-info">los angeles, san francisco, tokyo, wherever you are right now<br><br>© 2020 ceremony<br>crmny 1W</div>
+      <div id="footer-contact">
+        advocacy-driven collective storytelling<br><br>
+        <a href="mailto:ceremonyonline@gmail.com"><i class="fas fa-envelope"></i></a><a href="https://www.instagram.com/ceremonyonline/"><i class="fab fa-instagram"></i></a><a href="https://twitter.com/ceremonyonline"><i class = "fab fa-twitter"></i></a><a href="https://www.twitch.tv/ceremonyonline"><i class="fab fa-twitch"></i></a>
+      </div>
+    </footer>
+  </body>
+</html>
+
+<!--https://stackoverflow.com/questions/25020582/scrolling-to-an-anchor-using-transition-css3-->
+<script>
+  function scrollTo(to, duration) {
+      if (document.body.scrollTop == to) return;
+      var diff = to - document.body.scrollTop;
+      var scrollStep = Math.PI / (duration / 10);
+      var count = 0, currPos;
+      start = window.pageYOffset;
+      scrollInterval = setInterval(function(){
+          if (document.body.scrollTop != to) {
+              count = count + 1;
+              currPos = start + diff * (0.5 - 0.5 * Math.cos(count * scrollStep));
+              document.body.scrollTop = currPos;
+          }
+          else { clearInterval(scrollInterval); }
+      },10);
+  }
+
+  function test(elID)
+  {
+      var dest = document.getElementById(elID);
+      scrollTo(dest.offsetTop, 500);
+  }
+
+</script>
