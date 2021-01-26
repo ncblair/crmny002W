@@ -16,6 +16,7 @@
 
 <script>
 var targ = 0;
+var z = 2;
 function startDrag(e) {
     // determine event object
     if (!e) {
@@ -25,6 +26,9 @@ function startDrag(e) {
 
     // IE uses srcElement, others use target
     targ = e.target ? e.target : e.srcElement;
+    z = z + 1;
+    targ.style.zIndex = String(z);
+    console.log(z);
 
     if (targ.className != 'dragme') {return};
     // calculate event X, Y coordinates
