@@ -1,21 +1,21 @@
 .dragme{
-    position: relative;
+    position: absolute;
     cursor: pointer;
-    display: inline-block;
     width: auto;
 }
 
+
 #about{
     cursor: move;
-    height: auto;
-    width: 20%;
-    z-index: 1;
-    position: absolute;
+    max-width: 400px;
+    z-index:1;
 }
 
 #logo{
-    height: auto;
-    width: 25%;
-    z-index: 2;
-    position: absolute;
+    max-width: 600px;
+    z-index:2;
+}
+
+body {
+    overflow:hidden;
 }

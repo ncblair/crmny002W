@@ -26,7 +26,6 @@ function startDrag(e) {
     targ = e.target ? e.target : e.srcElement;
     z = z + 1;
     targ.style.zIndex = String(z);
-    console.log(z);
 
     if (targ.className != 'dragme') {return};
     // calculate event X, Y coordinates
@@ -49,11 +48,12 @@ function startDrag(e) {
 }
 function dragDiv(e) {
     if (!drag) {return};
-    if (!e) { var e= window.event};
+    if (!e) {var e = window.event};
     // move div element
-    console.log(targ);
-    targ.style.left=coordX+e.clientX-offsetX+'px';
-    targ.style.top=coordY+e.clientY-offsetY+'px';
+    console.log(window.innerWidth - targ.width);
+    console.log(Number(coordX+e.clientX-offsetX));
+    targ.style.left=String(Math.min(Math.max(Number(coordX+e.clientX-offsetX), 0), Number(window.innerWidth - targ.width)))+'px';
+    targ.style.top=String(Math.min(Math.max(Number(coordY+e.clientY-offsetY), 0), Number(window.innerHeight - targ.height)))+'px';
     return false;
 }
 function stopDrag() {
