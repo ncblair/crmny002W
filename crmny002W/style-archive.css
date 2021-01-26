@@ -1,5 +1,5 @@
 table {  
-  font-family: DIN Medium, sans-serif;
+  font-family: Neue Haas Grotesk, sans-serif;
     font-size: 22pt;
   border-collapse: collapse;
   text-align: left;
@@ -15,7 +15,7 @@ th, td {
 }
 
 td{
-	width: 80%;
+	width: 70%;
 	font-style: italic;
 }
 

@@ -1,0 +1,71 @@
+h1{
+   font-family: Neue Haas Grotesk Text Pro, sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 34px;
+    line-height: 1.2em;
+    position: relative;
+}
+
+h2{
+    font-family: Neue Haas Grotesk Display Pro, sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 21px;
+    line-height: 1.2em;
+    position: relative;
+}
+
+p{
+    font-family: Neue Haas Grotesk Display Pro, sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 21px;
+    line-height: 1.2em;
+    position: relative;
+}
+
+main{
+    float: left;
+    width: 30%;
+    display: inline-block;
+    position: fixed;
+    margin: 5% 0% 5% 7%;
+}
+
+aside{
+    float: right;
+    overflow: auto;
+    width: 50%;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    margin: 5% 0% 5% 5%;
+}
+
+iframe{
+    border: solid 1px black;
+}
+
+#zine1cover{
+    height: auto;
+    width: 40%;
+    display: inline-block;
+}
+    
+#zine2cover{
+    height: auto;
+    width: 30%;
+    display: inline-block;
+    border: solid 1px black;
+    }
+
+.clearfix:after{
+	visibility: hidden;
+    display: block;
+    font-size: 0;
+    content: " ";
+    clear: both;
+    height: 0;
+}
+
