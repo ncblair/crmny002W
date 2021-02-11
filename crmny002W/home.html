@@ -2,68 +2,47 @@
 <html>
     <head>
         <link rel="stylesheet" type="text/CSS" href="style-home.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
     </head>
     <body>
+        <div id= "overlay_container">
+            <iframe src="" id = "overlay" title="overlay"></iframe>
+        </div>
         <div id="draggable" class="dragme">
             <img src="img/logo.png" id="logo" class="dragme">
             <img src="img/about_txt.png" id="about" class="dragme">
-            <img src="img/LAFORME.png" id="LAFORME" class="dragme">
+            <img src="img/LAFORME.png" id="LAFORME" href="LAFORME.html" class="dragme">
             <img src="img/VOL2.png" id="VOL2" class="dragme">
             <img src="img/VOL1.png" id="VOL1" class="dragme">
-        </div> 
-
-<script>
-var targ = 0;
-var z = 2;
-function startDrag(e) {
-    // determine event object
-    if (!e) {
-        var e = window.event;
-    }
-    if(e.preventDefault) e.preventDefault();
-
-    // IE uses srcElement, others use target
-    targ = e.target ? e.target : e.srcElement;
-    z = z + 1;
-    targ.style.zIndex = String(z);
-
-    if (targ.className != 'dragme') {return};
-    // calculate event X, Y coordinates
-    offsetX = e.clientX;
-    offsetY = e.clientY;
-
-    // assign default values for top and left properties
-    if(!targ.style.left) { targ.style.left='0px'};
-    if (!targ.style.top) { targ.style.top='0px'};
-
-    // calculate integer values for top and left 
-    // properties
-    coordX = parseInt(targ.style.left);
-    coordY = parseInt(targ.style.top);
-    drag = true;
-
-    // move div element
-    document.onmousemove=dragDiv;
-    return false;
-}
-function dragDiv(e) {
-    if (!drag) {return};
-    if (!e) {var e = window.event};
-    // move div element
-    console.log(window.innerWidth - targ.width);
-    console.log(Number(coordX+e.clientX-offsetX));
-    targ.style.left=String(Math.min(Math.max(Number(coordX+e.clientX-offsetX), 0), Number(window.innerWidth - targ.width)))+'px';
-    targ.style.top=String(Math.min(Math.max(Number(coordY+e.clientY-offsetY), 0), Number(window.innerHeight - targ.height)))+'px';
-    return false;
-}
-function stopDrag() {
-    drag=false;
-}
-window.onload = function() {
-    document.onmousedown = startDrag;
-    document.onmouseup = stopDrag;
-}
-</script>
-    
+        </div>
     </body>
+    <script>
+        $(document).ready(function () {
+            z = 2;
+            $("#overlay_container").hide();
+            $(".dragme").draggable({
+                containment: 'parent'
+            });
+            $(".dragme").mousedown(function () {
+                z = z + 1;
+                $(this).css('zIndex', z);
+                $("#overlay_container").css('zIndex', z+1);
+            });
+            $(".dragme").click(function (e) {
+                e.preventDefault();
+                $("iframe").attr("src", $(this).attr('href'));
+                $("#overlay_container").fadeIn('slow');
+            });
+
+            $(".close").click(function () {
+                $(this).parent().fadeOut("slow");
+            });
+
+            $("#overlay_container").click(function() {
+                $(this).fadeOut("slow");      
+            });
+        });
+    </script>
 </html>
